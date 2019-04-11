@@ -1,0 +1,19 @@
+button {
+    border-radius: 5px;
+    background-color: darkgray;
+}
+
+.controller {
+    width: 70px;
+    height: 50px;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+}

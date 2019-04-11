@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roku remote</title>
+    <script src="rokuControl.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="attachKeypress()">
+    <h1>Roku Controller</h1>
+    <table>
+        <tr>
+            <th><button class="controller" onclick="sendKeypress('instantreplay')">↺</button></th>
+            <th><button class="controller" onclick="sendKeypress('up')">↑</button></th>
+            <th><button class="controller" onclick="sendKeypress('info')">*</button></th>
+        </tr>
+        <tr>
+            <td><button class="controller" onclick="sendKeypress('left')">←</button></td>
+            <td><button class="controller" onclick="sendKeypress('select')">Ok</button></td>
+            <td><button class="controller" onclick="sendKeypress('right')">→</button><br></td>
+        </tr>
+        <tr>
+            <td><button class="controller" onclick="sendKeypress('play')">►❚❚</button></td>
+            <td><button class="controller" onclick="sendKeypress('down')">↓</button></td>
+            <td><button class="controller" onclick="sendKeypress('home')">⌂</button></td>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+            <td><button class="controller" onclick="launchApp('12')">Netflix</button></td>
+            <td><button class="controller" onclick="launchApp('19977')">Spotify</button></td>
+            <td><button class="controller" onclick="launchApp('BBC News')">BBC</button></td>
+        </tr>
+    </table>
+    <footer>
+        <hr>
+        <h3>Settings</h3>
+        <input id="ip" type="url" onfocus="disableBinding()" onblur="attachKeypress()"></input>
+        <button onclick="setIP()">Set IP</button>
+        <button onclick="disableBinding()">Remove keypresses</button>
+        <button onclick="attachKeypress()">Reattach keypresses</button>
+    </footer>
+</body>
+
+</html>
